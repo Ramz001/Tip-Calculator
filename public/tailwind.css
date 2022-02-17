@@ -473,8 +473,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .main{
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-  margin-left: 6rem;
-  margin-right: 6rem;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -503,6 +501,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 1024px){
   .main{
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .main{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -510,7 +513,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .each-person{
   margin-left: 1rem;
   display: flex;
-  height: 95%;
+  height: 100%;
   width: auto;
   flex-direction: column;
   border-radius: 0.375rem;
@@ -529,6 +532,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: hsl(183 100% 15% / var(--tw-text-opacity));
 }
 
+.reset:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(189 41% 97% / var(--tw-bg-opacity));
+}
+
 .input{
   margin: 0px;
   -webkit-appearance: none;
@@ -541,6 +549,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .input:hover{
+  --tw-border-opacity: 1;
+  border-color: hsl(172 67% 45% / var(--tw-border-opacity));
+}
+
+.input:active{
   --tw-border-opacity: 1;
   border-color: hsl(172 67% 45% / var(--tw-border-opacity));
 }
@@ -591,17 +604,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: hsl(184 14% 56% / var(--tw-text-opacity));
 }
 
+.custom-num::-moz-placeholder{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.custom-num:-ms-input-placeholder{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.custom-num::placeholder{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
 .custom-num:hover{
   --tw-border-opacity: 1;
   border-color: hsl(172 67% 45% / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-input[type=number]::-webkit-inner-spin-button
-    {
-  -webkit-apperance : none;
-  margin: 0;
 }
 
 .relative{
