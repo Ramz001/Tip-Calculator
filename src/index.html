@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="/public/tailwind.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="bg-lightGrayishCyan-1 text-2xl">
+    
+  <img src="/images/logo.svg" alt="#" class="relative m-auto mb-16 mt-24">
+  <div class="main">
+    <div class="flex flex-col">
+      <label class="heading" for="bill">Bill</label>
+      <input type="number" id="number-sum" class="input">
+
+      <h2 class="heading mt-4">Select Tip %</h2>
+      <div class="grid grid-cols-3 grid-rows-2 mx-4 gap-x-2  h-32 my-4">
+        <button class="button">5%</button>
+        <button class="button">10%</button>
+        <button class="button">15%</button>
+        <button class="button">25%</button>
+        <button class="button">50%</button>
+        <input class="button custom-num"type='number' placeholder="Custom"></input>
+      </div>
+
+        <label class="heading my-2" for="number of people">Number of People</label>
+        <input type="number" id="number-people" class="input">
+    </div>
+    <div class="each-person">
+      <h3>Tip Amount</h3>
+      <div>/ person</div>
+
+      <h3>Total</h3>
+      <div>/ person</div>
+  
+      <button class="reset">Reset</button>
+    </div>
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Ramz001">Ramz</a>.
+  </div>
+
+  <!--JS part-->
+  <script src="script.js"></script>
+
+</body>
+</html>

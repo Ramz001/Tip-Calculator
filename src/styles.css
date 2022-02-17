@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .main{
+        @apply grid font-space-mono bg-white justify-center items-center 
+            grid-cols-2 my-10 mx-24 rounded p-4 
+    }
+    .each-person{
+        @apply flex flex-col bg-very-dark-cyan w-[auto] rounded-md h-[80%]
+    }
+    .reset{
+        @apply text-very-dark-cyan  bg-strong-cyan m-[5%] block rounded-sm
+    }
+    .input{
+        @apply bg-lightGrayishCyan-1 rounded-sm m-0 appearance-none
+    }
+    .heading{
+        @apply text-sm 
+    }
+    .button{
+        @apply bg-very-dark-cyan text-white px-6 rounded active:text-very-dark-cyan
+         active:bg-strong-cyan m-2 
+    }
+    .custom-num{
+        @apply bg-lightGrayishCyan-1 font-semibold text-darkGrayishCyan-2 appearance-none
+    }
+    
+}
+
+@layer base{
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button{
+        -webkit-apperance : none;
+        margin: 0;
+    }
+}
