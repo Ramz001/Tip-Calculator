@@ -425,12 +425,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-input[type=number]::-webkit-inner-spin-button,
-    input[type=number]::-webkit-outer-spin-button{
-  -webkit-apperance : none;
-  margin: 0;
-}
-
 *, ::before, ::after{
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -482,19 +476,41 @@ input[type=number]::-webkit-inner-spin-button,
   margin-left: 6rem;
   margin-right: 6rem;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: center;
   justify-content: center;
-  border-radius: 0.25rem;
+  border-radius: 1.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 1rem;
   font-family: Space Mono;
 }
 
+@media (min-width: 640px){
+  .main{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .main{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px){
+  .main{
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px){
+  .main{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .each-person{
+  margin-left: 1rem;
   display: flex;
-  height: 80%;
+  height: 95%;
   width: auto;
   flex-direction: column;
   border-radius: 0.375rem;
@@ -504,6 +520,7 @@ input[type=number]::-webkit-inner-spin-button,
 
 .reset{
   margin: 5%;
+  margin-top: 10rem;
   display: block;
   border-radius: 0.125rem;
   --tw-bg-opacity: 1;
@@ -518,8 +535,14 @@ input[type=number]::-webkit-inner-spin-button,
      -moz-appearance: none;
           appearance: none;
   border-radius: 0.125rem;
+  border-width: 2px;
   --tw-bg-opacity: 1;
   background-color: hsl(185 41% 84% / var(--tw-bg-opacity));
+}
+
+.input:hover{
+  --tw-border-opacity: 1;
+  border-color: hsl(172 67% 45% / var(--tw-border-opacity));
 }
 
 .heading{
@@ -538,6 +561,13 @@ input[type=number]::-webkit-inner-spin-button,
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.button:hover{
+  background-color: hsl(172 67% 45% / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.75;
+  --tw-text-opacity: 1;
+  color: hsl(183 100% 15% / var(--tw-text-opacity));
+}
+
 .button:active{
   --tw-bg-opacity: 1;
   background-color: hsl(172 67% 45% / var(--tw-bg-opacity));
@@ -546,14 +576,32 @@ input[type=number]::-webkit-inner-spin-button,
 }
 
 .custom-num{
+  margin: 0.5rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  border-radius: 0.25rem;
+  border-width: 2px;
   --tw-bg-opacity: 1;
   background-color: hsl(185 41% 84% / var(--tw-bg-opacity));
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   font-weight: 600;
   --tw-text-opacity: 1;
   color: hsl(184 14% 56% / var(--tw-text-opacity));
+}
+
+.custom-num:hover{
+  --tw-border-opacity: 1;
+  border-color: hsl(172 67% 45% / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+input[type=number]::-webkit-inner-spin-button
+    {
+  -webkit-apperance : none;
+  margin: 0;
 }
 
 .relative{
@@ -579,16 +627,24 @@ input[type=number]::-webkit-inner-spin-button,
   margin-bottom: 0.5rem;
 }
 
-.mb-16{
-  margin-bottom: 4rem;
+.mb-12{
+  margin-bottom: 3rem;
 }
 
-.mt-24{
-  margin-top: 6rem;
+.mt-16{
+  margin-top: 4rem;
 }
 
 .mt-4{
   margin-top: 1rem;
+}
+
+.mb-8{
+  margin-bottom: 2rem;
+}
+
+.mr-4{
+  margin-right: 1rem;
 }
 
 .flex{
@@ -603,6 +659,10 @@ input[type=number]::-webkit-inner-spin-button,
   height: 8rem;
 }
 
+.w-6{
+  width: 1.5rem;
+}
+
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -615,6 +675,10 @@ input[type=number]::-webkit-inner-spin-button,
   flex-direction: column;
 }
 
+.justify-between{
+  justify-content: space-between;
+}
+
 .gap-x-2{
   -moz-column-gap: 0.5rem;
        column-gap: 0.5rem;
@@ -625,7 +689,41 @@ input[type=number]::-webkit-inner-spin-button,
   background-color: hsl(185 41% 84% / var(--tw-bg-opacity));
 }
 
+.p-4{
+  padding: 1rem;
+}
+
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-sm{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-lightGrayishCyan-1{
+  --tw-text-opacity: 1;
+  color: hsl(185 41% 84% / var(--tw-text-opacity));
+}
+
+.text-strong-cyan{
+  --tw-text-opacity: 1;
+  color: hsl(172 67% 45% / var(--tw-text-opacity));
 }
