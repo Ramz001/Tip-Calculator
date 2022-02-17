@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
 /*
 ! tailwindcss v3.0.22 | MIT License | https://tailwindcss.com
@@ -476,6 +476,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: grid;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
   border-radius: 1.5rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -484,6 +485,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px){
+  .main{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
   .main{
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -508,10 +514,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   .main{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .main{
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
 }
 
 .each-person{
-  margin-left: 1rem;
   display: flex;
   height: 100%;
   width: auto;
@@ -528,6 +537,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.125rem;
   --tw-bg-opacity: 1;
   background-color: hsl(172 67% 45% / var(--tw-bg-opacity));
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   --tw-text-opacity: 1;
   color: hsl(183 100% 15% / var(--tw-text-opacity));
 }
@@ -546,6 +557,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 2px;
   --tw-bg-opacity: 1;
   background-color: hsl(185 41% 84% / var(--tw-bg-opacity));
+  text-align: right;
+  font-weight: 600;
 }
 
 .input:hover{
@@ -553,7 +566,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: hsl(172 67% 45% / var(--tw-border-opacity));
 }
 
-.input:active{
+.input:focus{
   --tw-border-opacity: 1;
   border-color: hsl(172 67% 45% / var(--tw-border-opacity));
 }
@@ -570,6 +583,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: hsl(183 100% 15% / var(--tw-bg-opacity));
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -604,26 +618,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: hsl(184 14% 56% / var(--tw-text-opacity));
 }
 
-.custom-num::-moz-placeholder{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.custom-num:-ms-input-placeholder{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.custom-num::placeholder{
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
 .custom-num:hover{
   --tw-border-opacity: 1;
   border-color: hsl(172 67% 45% / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+@media (min-width: 768px){
+  .custom-num::-moz-placeholder{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .custom-num:-ms-input-placeholder{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .custom-num::placeholder{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .relative{
@@ -735,6 +749,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 2.5rem;
 }
 
+.font-semibold{
+  font-weight: 600;
+}
+
+.font-bold{
+  font-weight: 700;
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -748,4 +770,18 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-strong-cyan{
   --tw-text-opacity: 1;
   color: hsl(172 67% 45% / var(--tw-text-opacity));
+}
+
+.invert{
+  --tw-invert: invert(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.sepia{
+  --tw-sepia: sepia(100%);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }

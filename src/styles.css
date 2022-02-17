@@ -1,39 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .main{
-        @apply grid font-space-mono bg-white justify-center items-center 
-            lg:grid-cols-2 my-10 lg:mx-[15%] rounded-3xl p-4 md:grid-rows-1 sm:grid-cols-1
-            sm:grid-rows-2
-    }
-    .each-person{
-        @apply flex flex-col bg-very-dark-cyan w-[auto] rounded-md h-[100%] ml-4 
-        
-    }
-    .reset{
-        @apply text-very-dark-cyan  bg-strong-cyan m-[5%] block rounded-sm mt-40
-            hover:bg-lightGrayishCyan-2
-    }
-    .input{
-        @apply bg-lightGrayishCyan-1 rounded-sm m-0 appearance-none    
-            hover:border-strong-cyan border-2 active:border-strong-cyan
-    }
-    .heading{
-        @apply text-sm
-    }
-    .button{
-        @apply bg-very-dark-cyan text-white px-6 rounded active:text-very-dark-cyan
+@layer components {
+  .main {
+    @apply grid font-space-mono bg-white justify-center items-center 
+            lg:grid-cols-2 my-10 lg:mx-[15%] rounded-3xl p-4 md:grid-rows-1 lg:grid-rows-1 sm:grid-cols-1
+            sm:grid-rows-2 gap-8 sm:mx-[5%];
+  }
+  .each-person {
+    @apply flex flex-col bg-very-dark-cyan w-[auto] rounded-md h-[100%];
+  }
+  .reset {
+    @apply text-very-dark-cyan  bg-strong-cyan m-[5%] block rounded-sm mt-40
+            hover:bg-lightGrayishCyan-2 py-1;
+  }
+  .input {
+    @apply bg-lightGrayishCyan-1 rounded-sm m-0 appearance-none    
+            hover:border-strong-cyan border-2 focus:border-strong-cyan
+            font-semibold text-right 
+  }
+  .heading {
+    @apply text-sm;
+  }
+  .button {
+    @apply bg-very-dark-cyan text-white px-6 rounded active:text-very-dark-cyan
             active:bg-strong-cyan m-2 hover:text-very-dark-cyan hover:bg-strong-cyan 
-            hover:bg-opacity-75
-    }
-    .custom-num{
-        @apply bg-lightGrayishCyan-1 font-semibold text-darkGrayishCyan-2 appearance-none
+            hover:bg-opacity-75 font-semibold;
+  }
+  .custom-num {
+    @apply bg-lightGrayishCyan-1 font-semibold text-darkGrayishCyan-2 appearance-none
             px-6 rounded m-2 hover:bg-white hover:border-strong-cyan border-2
-            placeholder:text-lg
-    }
-    
+            md:placeholder:text-base 
+  }
 }
