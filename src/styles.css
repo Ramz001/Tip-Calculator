@@ -20,7 +20,7 @@
   .input {
     @apply bg-lightGrayishCyan-1 rounded-sm m-0 appearance-none    
             hover:border-strong-cyan border-2 focus:border-strong-cyan
-            font-semibold text-right 
+            font-semibold text-right;
   }
   .heading {
     @apply text-sm;
@@ -33,6 +33,6 @@
   .custom-num {
     @apply bg-lightGrayishCyan-1 font-semibold text-darkGrayishCyan-2 appearance-none
             px-6 rounded m-2 hover:bg-white hover:border-strong-cyan border-2
-            md:placeholder:text-base 
+            md:placeholder:text-base;
   }
 }
