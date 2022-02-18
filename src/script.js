@@ -15,13 +15,21 @@ peopleInput.addEventListener("change",()=>{
     if(peopleInput.value <= 0){
         peopleInput.style.border = "solid red"
         error.classList.toggle("hidden")
-    }else{
+    } else{
     peopleInput.style.border = "none"
     error.classList.add("hidden")
     }
-    calculateTip
+    calculateTip()
+})
+reset.addEventListener("click",()=>{
+    peopleInput.value = 1
+    billInput.value = ""
+    customTip.value = "custom"
+    peopleInput.style.border = "border-2"
+    error.classList.add("hidden")
 })
 
+//functions
 function calculateTip(){
     let bill = parseFloat(billInput.value)
     let tipPercent = customTip.value
@@ -34,6 +42,5 @@ function calculateTip(){
     tipPerPerson.textContent = parseFloat((totalTip / numberOfPeople).toFixed(2))
     totalPerPerson.textContent = parseFloat((total / numberOfPeople).toFixed(2))
 }
-
 
 
