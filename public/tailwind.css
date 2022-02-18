@@ -607,6 +607,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: hsl(183 100% 15% / var(--tw-bg-opacity));
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -707,6 +709,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.5rem;
 }
 
+.my-3{
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.mx-3{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .mb-12{
   margin-bottom: 3rem;
 }
@@ -739,6 +751,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
+.mt-\[300px\]{
+  margin-top: 300px;
+}
+
+.mt-\[299px\]{
+  margin-top: 299px;
+}
+
+.mt-\[301px\]{
+  margin-top: 301px;
+}
+
+.mt-\[302px\]{
+  margin-top: 302px;
+}
+
 .flex{
   display: flex;
 }
@@ -755,6 +783,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 8rem;
 }
 
+.h-36{
+  height: 9rem;
+}
+
 .w-4{
   width: 1rem;
 }
@@ -763,12 +795,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 1.5rem;
 }
 
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-rows-2{
-  grid-template-rows: repeat(2, minmax(0, 1fr));
+.grid-rows-3{
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .flex-col{
@@ -860,4 +892,24 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-blue-600{
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
+}
+
+@media (min-width: 640px){
+  .sm\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .sm\:grid-rows-3{
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px){
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-rows-2{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,17 +10,14 @@
     <link
       rel="icon"
       type="image/png"
-      sizes="32x32" 
+      sizes="32x32"
       href="./images/favicon-32x32.png"
     />
 
     <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
-    <style>
- 
-    </style>
- 
+    <style></style>
   </head>
   <body class="bg-lightGrayishCyan-1 text-2xl">
     <header>
@@ -29,30 +26,43 @@
 
     <main class="main">
       <div class="flex flex-col">
-        <label class="heading" for="bill">Bill  </label>
-          <img src="/images/icon-dollar.svg" class="w-4 absolute mt-[27px] ml-2 z-10">
-          <input type="number" id="number-sum" class="input" />
-      
+        <label class="heading" for="bill">Bill </label>
+        <img
+          src="/images/icon-dollar.svg"
+          class="w-4 absolute mt-[27px] ml-2 z-10"
+        />
+        <input type="number" id="number-sum" class="input" />
 
         <h2 class="heading mt-4">Select Tip %</h2>
-        <div class="grid grid-cols-3 grid-rows-2 mx-4 gap-x-2 h-32 my-4">
+        <div
+          class="grid mx-3 gap-x-2 h-36 my-3 grid-cols-2 grid-rows-3 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2"
+        >
           <button class="button tips" value="5">5%</button>
           <button class="button tips" value="10">10%</button>
           <button class="button tips" value="15">15%</button>
           <button class="button tips" value="25">25%</button>
-          <button class="button tips" value="50">50%</button> 
-          <input class="custom-tip" id="custom-percent" type="number" placeholder="Custom" />
+          <button class="button tips" value="50">50%</button>
+          <input
+            class="custom-tip"
+            id="custom-percent"
+            type="number"
+            placeholder="Custom"
+          />
         </div>
 
         <div class="flex justify-between items-center">
-        <label class="heading my-2" for="number of people"
-          >Number of People
+          <label class="heading my-2" for="number of people"
+            >Number of People
           </label>
-          <div class="text-sm text-red-700 text-semibold hidden error">Can't be zero</div>
+          <div class="text-sm text-red-700 text-semibold hidden error">
+            Can't be zero
+          </div>
         </div>
-        <img src="/images/icon-person.svg" class="w-4 absolute mt-[296px] ml-2 z-10">
+        <img
+          src="/images/icon-person.svg"
+          class="w-4 absolute mt-[302px] ml-2 z-10"
+        />
         <input type="number" id="number-people" class="input" value="1" />
-       
       </div>
       <div class="each-person p-4">
         <div class="flex justify-between mb-8">
@@ -62,7 +72,11 @@
           </div>
           <div class="flex mr-4">
             <img src="/images/icon-dollar.svg" class="w-6 filter-blue" />
-            <span id="tip-per-person" class="text-strong-cyan text-4xl font-bold">0,00</span>
+            <span
+              id="tip-per-person"
+              class="text-strong-cyan text-4xl font-bold"
+              >0,00</span
+            >
           </div>
         </div>
 
@@ -73,7 +87,11 @@
           </div>
           <div class="flex mr-4">
             <img src="/images/icon-dollar.svg" class="w-6 filter-blue" />
-            <span id="total-per-person" class="text-strong-cyan text-4xl font-bold">0,00</span>
+            <span
+              id="total-per-person"
+              class="text-strong-cyan text-4xl font-bold"
+              >0,00</span
+            >
           </div>
         </div>
 
@@ -81,11 +99,17 @@
       </div>
     </main>
 
-    <footer class="text-sm text-center ">
+    <footer class="text-sm text-center">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-blue-600"
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        class="text-blue-600"
         >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/Ramz001" class="text-blue-600" target="_blank">Ramz</a>.
+      >. Coded by
+      <a href="https://github.com/Ramz001" class="text-blue-600" target="_blank"
+        >Ramz</a
+      >.
     </footer>
 
     <!--JS part-->

@@ -42,5 +42,3 @@ function calculateTip(){
     tipPerPerson.textContent = parseFloat((totalTip / numberOfPeople).toFixed(2))
     totalPerPerson.textContent = parseFloat((total / numberOfPeople).toFixed(2))
 }
-
-
