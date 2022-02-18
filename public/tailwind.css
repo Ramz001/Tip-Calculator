@@ -678,6 +678,39 @@ Ensure the default browser behavior of the `hidden` attribute.
       brightness(115%) contrast(92%);
 }
 
+.buttons-container{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  display: grid;
+  height: 9rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
+@media (min-width: 640px){
+  .buttons-container{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .buttons-container{
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px){
+  .buttons-container{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .buttons-container{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+}
+
 .absolute{
   position: absolute;
 }
@@ -694,19 +727,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 
-.mx-4{
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-.my-4{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.mx-3{
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .my-3{
@@ -714,9 +737,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0.75rem;
 }
 
-.mx-3{
-  margin-left: 0.75rem;
-  margin-right: 0.75rem;
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mb-12{
@@ -739,8 +762,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
-.mt-\[296px\]{
-  margin-top: 296px;
+.mt-\[302px\]{
+  margin-top: 302px;
 }
 
 .mb-8{
@@ -749,22 +772,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mr-4{
   margin-right: 1rem;
-}
-
-.mt-\[300px\]{
-  margin-top: 300px;
-}
-
-.mt-\[299px\]{
-  margin-top: 299px;
-}
-
-.mt-\[301px\]{
-  margin-top: 301px;
-}
-
-.mt-\[302px\]{
-  margin-top: 302px;
 }
 
 .flex{
@@ -777,10 +784,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .hidden{
   display: none;
-}
-
-.h-32{
-  height: 8rem;
 }
 
 .h-36{
@@ -892,7 +895,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-blue-600{
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
-} 
+}
 
 @media (min-width: 640px){
   .sm\:grid-cols-2{
