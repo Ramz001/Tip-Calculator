@@ -8,12 +8,22 @@ const tipPerPerson = document.querySelector("#tip-per-person")
 const totalPerPerson = document.querySelector("#total-per-person")
 const error = document.querySelector(".error")
 
-let billValue = 0.0
-let numberOfPeople = 1
+//Event Listeners
+billInput.addEventListener("change",calculateTip)
+customTip.addEventListener("change",calculateTip)
+peopleInput.addEventListener("change",calculateTip)
 
-billValue = (billInput.value).toFixed(2)
-numberOfPeople = peopleInput.value
+function calculateTip(){
+  let bill = parseFloat(billInput.value)
+  let tipPercent = customTip.value
+  let numberOfPeople = peopleInput.value
 
-const calculateTip =()=>{
-   return billAmount * numberPeople
+  billInput.value = bill.toFixed(2)
+
+  let totalTip = parseFloat((bill * (tipPercent / 100)).toFixed(2))
+  let total = parseFloat((bill + totalTip).toFixed(2))
+  tipPerPerson.textContent = parseFloat((totalTip / numberOfPeople).toFixed(2))
+  totalPerPerson.textContent = parseFloat((total / numberOfPeople).toFixed(2))
 }
+
+
