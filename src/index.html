@@ -18,35 +18,21 @@
 
     <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
     <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-
-      input::-webkit-outer-spin-button,
-      input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-
-      input[type="number"] {
-        -moz-appearance: textfield;
-      }
-      .filter-blue {
-        filter: invert(60%) sepia(71%) saturate(410%) hue-rotate(122deg)
-          brightness(115%) contrast(92%);
-      }
+ 
     </style>
+ 
   </head>
   <body class="bg-lightGrayishCyan-1 text-2xl">
-    <img src="/images/logo.svg" alt="#" class="relative m-auto mb-12 mt-16" />
-    <div class="main">
+    <header>
+      <img src="/images/logo.svg" alt="#" class="relative m-auto mb-12 mt-16" />
+    </header>
+
+    <main class="main">
       <div class="flex flex-col">
-        <label class="heading" for="bill">Bill</label>
-        <input type="number" id="number-sum" class="input" />
+        <label class="heading" for="bill">Bill  </label>
+          <img src="/images/icon-dollar.svg" class="w-4 absolute mt-[27px] ml-2 z-10">
+          <input type="number" id="number-sum" class="input relative" />
+      
 
         <h2 class="heading mt-4">Select Tip %</h2>
         <div class="grid grid-cols-3 grid-rows-2 mx-4 gap-x-2 h-32 my-4">
@@ -59,9 +45,12 @@
         </div>
 
         <label class="heading my-2" for="number of people"
-          >Number of People</label
-        >
-        <input type="number" id="number-people" class="input" />
+          >Number of People
+          </label
+          >
+        <img src="/images/icon-person.svg" class="w-4 absolute mt-[296px] ml-2 z-10">
+        <input type="number" id="number-people" class="input relative" />
+       
       </div>
       <div class="each-person p-4">
         <div class="flex justify-between mb-8">
@@ -88,14 +77,14 @@
 
         <button class="reset">Reset</button>
       </div>
-    </div>
+    </main>
 
-    <div class="attribution">
+    <footer class="text-sm text-center ">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-blue-600"
         >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/Ramz001" target="_blank">Ramz</a>.
-    </div>
+      >. Coded by <a href="https://github.com/Ramz001" class="text-blue-600" target="_blank">Ramz</a>.
+    </footer>
 
     <!--JS part-->
     <script src="script.js"></script>
