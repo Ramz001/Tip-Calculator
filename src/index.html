@@ -31,25 +31,27 @@
       <div class="flex flex-col">
         <label class="heading" for="bill">Bill  </label>
           <img src="/images/icon-dollar.svg" class="w-4 absolute mt-[27px] ml-2 z-10">
-          <input type="number" id="number-sum" class="input relative" />
+          <input type="number" id="number-sum" class="input" />
       
 
         <h2 class="heading mt-4">Select Tip %</h2>
         <div class="grid grid-cols-3 grid-rows-2 mx-4 gap-x-2 h-32 my-4">
-          <button class="button">5%</button>
-          <button class="button">10%</button>
-          <button class="button">15%</button>
-          <button class="button">25%</button>
-          <button class="button">50%</button> 
-          <input class="custom-num" type="number" placeholder="Custom" />
+          <button class="button tips" value="5">5%</button>
+          <button class="button tips" value="10">10%</button>
+          <button class="button tips" value="15">15%</button>
+          <button class="button tips" value="25">25%</button>
+          <button class="button tips" value="50">50%</button> 
+          <input class="custom-tip" id="custom-percent" type="number" placeholder="Custom" />
         </div>
 
+        <div class="flex justify-between items-center">
         <label class="heading my-2" for="number of people"
           >Number of People
-          </label
-          >
+          </label>
+          <div class="text-sm text-red-700 text-semibold hidden error">Can't be zero</div>
+        </div>
         <img src="/images/icon-person.svg" class="w-4 absolute mt-[296px] ml-2 z-10">
-        <input type="number" id="number-people" class="input relative" />
+        <input type="number" id="number-people" class="input" placeholder="0" />
        
       </div>
       <div class="each-person p-4">
@@ -60,7 +62,7 @@
           </div>
           <div class="flex mr-4">
             <img src="/images/icon-dollar.svg" class="w-6 filter-blue" />
-            <span class="text-strong-cyan text-4xl font-bold">0,00</span>
+            <span id="tip-per-person" class="text-strong-cyan text-4xl font-bold">0,00</span>
           </div>
         </div>
 
@@ -71,7 +73,7 @@
           </div>
           <div class="flex mr-4">
             <img src="/images/icon-dollar.svg" class="w-6 filter-blue" />
-            <span class="text-strong-cyan text-4xl font-bold">0,00</span>
+            <span id="total-per-person" class="text-strong-cyan text-4xl font-bold">0,00</span>
           </div>
         </div>
 
@@ -87,6 +89,6 @@
     </footer>
 
     <!--JS part-->
-    <script src="script.js"></script>
+    <script src="/src/script.js"></script>
   </body>
 </html>

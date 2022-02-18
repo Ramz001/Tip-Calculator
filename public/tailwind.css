@@ -579,6 +579,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 2px;
   --tw-bg-opacity: 1;
   background-color: hsl(185 41% 84% / var(--tw-bg-opacity));
+  padding-right: 0.5rem;
   text-align: right;
   font-weight: 600;
 }
@@ -609,6 +610,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 600;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
 
 .button:hover{
@@ -625,7 +632,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: hsl(183 100% 15% / var(--tw-text-opacity));
 }
 
-.custom-num{
+.custom-tip{
   margin: 0.5rem;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -636,12 +643,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: hsl(185 41% 84% / var(--tw-bg-opacity));
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+  text-align: right;
   font-weight: 600;
   --tw-text-opacity: 1;
   color: hsl(184 14% 56% / var(--tw-text-opacity));
 }
 
-.custom-num:hover{
+.custom-tip:hover{
   --tw-border-opacity: 1;
   border-color: hsl(172 67% 45% / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
@@ -649,15 +657,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 768px){
-  .custom-num::-moz-placeholder{
+  .custom-tip::-moz-placeholder{
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  .custom-num:-ms-input-placeholder{
+  .custom-tip:-ms-input-placeholder{
     font-size: 1rem;
     line-height: 1.5rem;
   }
-  .custom-num::placeholder{
+  .custom-tip::placeholder{
     font-size: 1rem;
     line-height: 1.5rem;
   }
@@ -666,10 +674,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .filter-blue {
   filter: invert(60%) sepia(71%) saturate(410%) hue-rotate(122deg)
       brightness(115%) contrast(92%);
-}
-
-.filter-white{
-  filter: brightness(100%)
 }
 
 .absolute{
@@ -723,6 +727,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.mt-\[296px\]{
+  margin-top: 296px;
+}
+
 .mb-8{
   margin-bottom: 2rem;
 }
@@ -731,36 +739,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 1rem;
 }
 
-.mt-\[400px\]{
-  margin-top: 400px;
-}
-
-.mt-\[300px\]{
-  margin-top: 300px;
-}
-
-.mt-\[298px\]{
-  margin-top: 298px;
-}
-
-.mt-\[297px\]{
-  margin-top: 297px;
-}
-
-.mt-\[296px\]{
-  margin-top: 296px;
-}
-
-.ml-4{
-  margin-left: 1rem;
-}
-
 .flex{
   display: flex;
 }
 
 .grid{
   display: grid;
+}
+
+.hidden{
+  display: none;
 }
 
 .h-32{
@@ -785,6 +773,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .flex-col{
   flex-direction: column;
+}
+
+.items-center{
+  align-items: center;
 }
 
 .justify-between{
@@ -837,6 +829,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 700;
 }
 
+.text-red-700{
+  --tw-text-opacity: 1;
+  color: rgb(185 28 28 / var(--tw-text-opacity));
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -855,18 +852,4 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-blue-600{
   --tw-text-opacity: 1;
   color: rgb(37 99 235 / var(--tw-text-opacity));
-}
-
-.invert{
-  --tw-invert: invert(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.sepia{
-  --tw-sepia: sepia(100%);
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
-}
-
-.filter{
-  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
