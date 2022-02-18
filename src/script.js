@@ -22,13 +22,10 @@ peopleInput.addEventListener("change",()=>{
     calculateTip
 })
 
-
-
 function calculateTip(){
     let bill = parseFloat(billInput.value)
-    let tipPercent = 1
+    let tipPercent = customTip.value
     let numberOfPeople = peopleInput.value
-    tipPercent = customTip.value
 
     billInput.value = bill.toFixed(2)
 
