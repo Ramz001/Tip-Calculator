@@ -11,19 +11,32 @@ const error = document.querySelector(".error")
 //Event Listeners
 billInput.addEventListener("change",calculateTip)
 customTip.addEventListener("change",calculateTip)
-peopleInput.addEventListener("change",calculateTip)
+peopleInput.addEventListener("change",()=>{
+    if(peopleInput.value <= 0){
+        peopleInput.style.border = "solid red"
+        error.classList.toggle("hidden")
+    }else{
+    peopleInput.style.border = "none"
+    error.classList.add("hidden")
+    }
+    calculateTip
+})
+
+
 
 function calculateTip(){
-  let bill = parseFloat(billInput.value)
-  let tipPercent = customTip.value
-  let numberOfPeople = peopleInput.value
+    let bill = parseFloat(billInput.value)
+    let tipPercent = 1
+    let numberOfPeople = peopleInput.value
+    tipPercent = customTip.value
 
-  billInput.value = bill.toFixed(2)
+    billInput.value = bill.toFixed(2)
 
-  let totalTip = parseFloat((bill * (tipPercent / 100)).toFixed(2))
-  let total = parseFloat((bill + totalTip).toFixed(2))
-  tipPerPerson.textContent = parseFloat((totalTip / numberOfPeople).toFixed(2))
-  totalPerPerson.textContent = parseFloat((total / numberOfPeople).toFixed(2))
+    let totalTip = parseFloat((bill * (tipPercent / 100)).toFixed(2))
+    let total = parseFloat((bill + totalTip).toFixed(2))
+    tipPerPerson.textContent = parseFloat((totalTip / numberOfPeople).toFixed(2))
+    totalPerPerson.textContent = parseFloat((total / numberOfPeople).toFixed(2))
 }
+
 
 
