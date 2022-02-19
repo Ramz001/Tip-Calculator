@@ -52,7 +52,7 @@ input[type="number"] {
     filter: brightness(100%)
   }
   .buttons-container{
-    @apply grid mx-3 gap-x-2 h-36 my-3 grid-cols-2 grid-rows-3 sm:grid-cols-2 
+    @apply grid mx-3 gap-x-2 lg:h-36 sm:h-40 my-3 grid-cols-2 grid-rows-3 sm:grid-cols-2 
         sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2
   }
 }
