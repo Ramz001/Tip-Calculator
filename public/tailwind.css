@@ -761,10 +761,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
-.mt-\[302px\]{
-  margin-top: 302px;
-}
-
 .mb-8{
   margin-bottom: 2rem;
 }
@@ -884,26 +880,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 @media (min-width: 640px){
-  .sm\:mt-\[300px\]{
-    margin-top: 300px;
-  }
-
-  .sm\:mt-\[305px\]{
-    margin-top: 305px;
-  }
-
-  .sm\:mt-\[315px\]{
-    margin-top: 315px;
-  }
-
-  .sm\:mt-\[316px\]{
-    margin-top: 316px;
-  }
-
-  .sm\:mt-\[318px\]{
-    margin-top: 318px;
-  }
-
   .sm\:mt-\[319px\]{
     margin-top: 319px;
   }
