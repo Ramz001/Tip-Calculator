@@ -21,7 +21,11 @@
   </head>
   <body class="bg-lightGrayishCyan-1 text-2xl">
     <header>
-      <img src="images/logo.svg" alt="#" class="relative m-auto mb-[2.7rem] mt-16" />
+      <img
+        src="images/logo.svg"
+        alt="#"
+        class="relative m-auto mb-[2.7rem] mt-16"
+      />
     </header>
 
     <main class="main">
@@ -34,14 +38,12 @@
         <input type="number" id="number-sum" class="input" />
 
         <h2 class="heading mt-4">Select Tip %</h2>
-        <div
-          class="buttons-container"
-        >
-          <button class="button tips" value="5">5%</button>
-          <button class="button tips" value="10">10%</button>
-          <button class="button tips" value="15">15%</button>
-          <button class="button tips" value="25">25%</button>
-          <button class="button tips" value="50">50%</button>
+        <div class="buttons-container">
+          <button class="button" id="five-percent">5%</button>
+          <button class="button" id="ten-percent">10%</button>
+          <button class="button" id="fifteen-percent">15%</button>
+          <button class="button" id="twenty-five-percent">25%</button>
+          <button class="button" id="fifty-percent">50%</button>
           <input
             class="custom-tip"
             id="custom-percent"
@@ -60,7 +62,7 @@
         </div>
         <img
           src="images/icon-person.svg"
-          class="w-4 absolute lg:mt-[302px] ml-2 z-10 sm:mt-[319px]"
+          class="w-4 absolute lg:mt-[302px] ml-2 z-10 mt-[327px] sm:mt-[319px]"
         />
         <input type="number" id="number-people" class="input" value="1" />
       </div>
@@ -75,7 +77,7 @@
             <span
               id="tip-per-person"
               class="text-strong-cyan text-4xl font-bold"
-              >0,00</span
+              >0.00</span
             >
           </div>
         </div>
@@ -90,7 +92,7 @@
             <span
               id="total-per-person"
               class="text-strong-cyan text-4xl font-bold"
-              >0,00</span
+              >0.00</span
             >
           </div>
         </div>

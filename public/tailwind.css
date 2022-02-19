@@ -720,6 +720,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.button-active{
+  --tw-bg-opacity: 1;
+  background-color: hsl(172 67% 45% / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(183 100% 15% / var(--tw-text-opacity));
+}
+
 .absolute{
   position: absolute;
 }
@@ -759,6 +766,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mt-4{
   margin-top: 1rem;
+}
+
+.mt-\[327px\]{
+  margin-top: 327px;
 }
 
 .mb-8{
