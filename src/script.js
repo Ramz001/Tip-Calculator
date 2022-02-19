@@ -107,5 +107,12 @@ reset.addEventListener("click", () => {
   billInput.value = "";
   customTip.value = "custom";
   peopleInput.style.border = "border-2";
+  tipPerPerson.textContent = "0.00"
+  totalPerPerson.textContent = "0.00"
   error.classList.add("hidden");
+  fiftyPercent.classList.remove("button-active");
+  twentyFivePercent.classList.remove("button-active");
+  fifteenPercent.classList.remove("button-active");
+  tenPercent.classList.remove("button-active");
+  fivePercent.classList.remove("button-active");
 });
