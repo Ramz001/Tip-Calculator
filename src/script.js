@@ -13,7 +13,7 @@ const fifteenPercent = document.getElementById("fifteen-percent");
 const twentyFivePercent = document.getElementById("twenty-five-percent");
 const fiftyPercent = document.getElementById("fifty-percent");
 
-let tipPercent = customTip.value;
+let tipPercent = 0;
 
 //functions
 const calculateTip = () => {
@@ -29,6 +29,7 @@ const calculateTip = () => {
 const handleClickFive = () => {
   tipPercent = 5;
   calculateTip();
+  customZero()
   fivePercent.classList.toggle("button-active");
 
   fiftyPercent.classList.remove("button-active");
@@ -40,6 +41,7 @@ const handleClickFive = () => {
 const handleClickTen = () => {
   tipPercent = 10;
   calculateTip();
+  customZero()
   tenPercent.classList.toggle("button-active");
 
   fiftyPercent.classList.remove("button-active");
@@ -51,6 +53,7 @@ const handleClickTen = () => {
 const handleClickFifteen = () => {
   tipPercent = 15;
   calculateTip();
+  customZero()
   fifteenPercent.classList.toggle("button-active");
 
   fiftyPercent.classList.remove("button-active");
@@ -62,6 +65,7 @@ const handleClickFifteen = () => {
 const handleClickTwentyFive = () => {
   tipPercent = 25;
   calculateTip();
+  customZero()
   twentyFivePercent.classList.toggle("button-active");
 
   fiftyPercent.classList.remove("button-active");
@@ -73,6 +77,7 @@ const handleClickTwentyFive = () => {
 const handleClickFifty = () => {
   tipPercent = 50;
   calculateTip();
+  customZero()
   fiftyPercent.classList.toggle("button-active");
 
   twentyFivePercent.classList.remove("button-active");
@@ -80,10 +85,19 @@ const handleClickFifty = () => {
   tenPercent.classList.remove("button-active");
   fivePercent.classList.remove("button-active");
 };
-
-//Event Listeners
+//================
+// Event Listeners
+//================
 billInput.addEventListener("change", calculateTip);
-customTip.addEventListener("change", calculateTip);
+customTip.addEventListener("change", ()=>{
+  tipPercent = customTip.value
+  calculateTip()
+  fiftyPercent.classList.remove("button-active");
+  twentyFivePercent.classList.remove("button-active");
+  fifteenPercent.classList.remove("button-active");
+  tenPercent.classList.remove("button-active");
+  fivePercent.classList.remove("button-active");
+});
 
 fivePercent.addEventListener("click", handleClickFive);
 tenPercent.addEventListener("click", handleClickTen);
@@ -116,3 +130,7 @@ reset.addEventListener("click", () => {
   tenPercent.classList.remove("button-active");
   fivePercent.classList.remove("button-active");
 });
+
+function customZero(){
+  return customTip.value = "custom";
+}

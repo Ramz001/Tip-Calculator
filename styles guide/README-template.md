@@ -43,10 +43,10 @@ To sum up , it was pretty fun to do as I learned how to connect html and css tem
 of a website with js in a practical way.
 
 ### Built with
-
   HTML 5
   Tailwindcss
   Vanilla JS
+  
 ### What I learned
 
 ```html
@@ -60,13 +60,9 @@ body {
   self-center
 }
 ```
-
 ### Useful resources
-
   [https://youtu.be/4nQ-8FLU56g] - a video that helped me a lot during javascript section of this project
   [https://tailwindcss.com] - an official tailwindcss home page that helped me a lot during designing 
 ## Author
-
-
 - Frontend Mentor - [@Ramz001](https://www.frontendmentor.io/profile/Ramz001)
 
