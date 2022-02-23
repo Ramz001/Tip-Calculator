@@ -30,60 +30,40 @@ const handleClickFive = () => {
   tipPercent = 5;
   calculateTip();
   customZero()
+  buttonZero()
   fivePercent.classList.toggle("button-active");
-
-  fiftyPercent.classList.remove("button-active");
-  twentyFivePercent.classList.remove("button-active");
-  fifteenPercent.classList.remove("button-active");
-  tenPercent.classList.remove("button-active");
 };
 
 const handleClickTen = () => {
   tipPercent = 10;
   calculateTip();
   customZero()
+  buttonZero()
   tenPercent.classList.toggle("button-active");
-
-  fiftyPercent.classList.remove("button-active");
-  twentyFivePercent.classList.remove("button-active");
-  fifteenPercent.classList.remove("button-active");
-  fivePercent.classList.remove("button-active");
 };
 
 const handleClickFifteen = () => {
   tipPercent = 15;
   calculateTip();
   customZero()
+  buttonZero()
   fifteenPercent.classList.toggle("button-active");
-
-  fiftyPercent.classList.remove("button-active");
-  twentyFivePercent.classList.remove("button-active");
-  tenPercent.classList.remove("button-active");
-  fivePercent.classList.remove("button-active");
 };
 
 const handleClickTwentyFive = () => {
   tipPercent = 25;
   calculateTip();
   customZero()
+  buttonZero()
   twentyFivePercent.classList.toggle("button-active");
-
-  fiftyPercent.classList.remove("button-active");
-  fifteenPercent.classList.remove("button-active");
-  tenPercent.classList.remove("button-active");
-  fivePercent.classList.remove("button-active");
 };
 
 const handleClickFifty = () => {
   tipPercent = 50;
   calculateTip();
   customZero()
+  buttonZero()
   fiftyPercent.classList.toggle("button-active");
-
-  twentyFivePercent.classList.remove("button-active");
-  fifteenPercent.classList.remove("button-active");
-  tenPercent.classList.remove("button-active");
-  fivePercent.classList.remove("button-active");
 };
 //================
 // Event Listeners
@@ -117,20 +97,25 @@ peopleInput.addEventListener("change", () => {
 });
 
 reset.addEventListener("click", () => {
-  peopleInput.value = 1;
+  peopleInput.value = 0;
   billInput.value = "";
-  customTip.value = "custom";
   peopleInput.style.border = "border-2";
   tipPerPerson.textContent = "0.00"
   totalPerPerson.textContent = "0.00"
   error.classList.add("hidden");
+  buttonZero()
+  customZero()
+});
+
+function customZero(){
+  return customTip.value = "custom";
+}
+
+function buttonZero(){
   fiftyPercent.classList.remove("button-active");
   twentyFivePercent.classList.remove("button-active");
   fifteenPercent.classList.remove("button-active");
   tenPercent.classList.remove("button-active");
   fivePercent.classList.remove("button-active");
-});
-
-function customZero(){
-  return customTip.value = "custom";
+  return
 }
