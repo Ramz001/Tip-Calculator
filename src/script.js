@@ -53,7 +53,7 @@ peopleInput.addEventListener("change", () => {
 });
 
 reset.addEventListener("click", () => {
-  peopleInput.value = 0;
+  peopleInput.value = 1;
   billInput.value = "";
   peopleInput.style.border = "border-2";
   tipPerPerson.textContent = "0.00";
