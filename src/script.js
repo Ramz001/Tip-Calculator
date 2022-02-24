@@ -6,7 +6,7 @@ const reset = document.querySelector(".reset");
 const tipPerPerson = document.querySelector("#tip-per-person");
 const totalPerPerson = document.querySelector("#total-per-person");
 const error = document.querySelector(".error");
-const btns = document.querySelectorAll(".button")
+const btns = document.querySelectorAll(".button");
 
 let tipPercent = 0;
 
@@ -21,24 +21,24 @@ const calculateTip = () => {
   totalPerPerson.textContent = parseFloat((total / numberOfPeople).toFixed(2));
 };
 
-btns.forEach(btn =>{
-  btn.addEventListener('click',()=>{
-    tipPercent =  Number(btn.dataset.value)
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    tipPercent = Number(btn.dataset.value);
     calculateTip();
-    customZero()
-    zero()
-    btn.classList.toggle("button-active")
-  })
-})
+    customZero();
+    zero();
+    btn.classList.toggle("button-active");
+  });
+});
 
 //================
 // Event Listeners
 //================
 billInput.addEventListener("change", calculateTip);
 customTip.addEventListener("change", () => {
-  tipPercent = customTip.value
-  calculateTip()
-  zero()
+  tipPercent = customTip.value;
+  calculateTip();
+  zero();
 });
 
 peopleInput.addEventListener("change", () => {
@@ -56,17 +56,17 @@ reset.addEventListener("click", () => {
   peopleInput.value = 0;
   billInput.value = "";
   peopleInput.style.border = "border-2";
-  tipPerPerson.textContent = "0.00"
-  totalPerPerson.textContent = "0.00"
+  tipPerPerson.textContent = "0.00";
+  totalPerPerson.textContent = "0.00";
   error.classList.add("hidden");
-  zero()
-  customZero()
+  zero();
+  customZero();
 });
 
-function customZero(){
-  return customTip.value = "custom";
+function customZero() {
+  return (customTip.value = "custom");
 }
 
-function zero(){
-  return btns.forEach(btn => btn.classList.remove("button-active"))
+function zero() {
+  return btns.forEach((btn) => btn.classList.remove("button-active"));
 }
