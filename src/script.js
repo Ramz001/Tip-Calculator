@@ -10,7 +10,7 @@ const btns = document.querySelectorAll(".button");
 
 let tipPercent = 0;
 
-//functions
+//Main calculation 
 const calculateTip = () => {
   const bill = parseFloat(billInput.value);
   const numberOfPeople = peopleInput.value;
@@ -52,7 +52,7 @@ peopleInput.addEventListener("change", () => {
   calculateTip();
 });
 
-//resetButton
+//reset button
 reset.addEventListener("click", () => {
   peopleInput.value = 1;
   billInput.value = "";
