@@ -26,7 +26,7 @@ btns.forEach((btn) => {
     tipPercent = Number(btn.dataset.value);
     calculateTip();
     customDeactive();
-    buttonDeactive();
+    btnsDeactive();
     btn.classList.toggle("button-active");
   });
 });
@@ -38,7 +38,7 @@ billInput.addEventListener("change", calculateTip);
 customTip.addEventListener("change", () => {
   tipPercent = customTip.value;
   calculateTip();
-  buttonDeactive();
+  btnsDeactive();
 });
 
 peopleInput.addEventListener("change", () => {
@@ -60,7 +60,7 @@ reset.addEventListener("click", () => {
   tipPerPerson.textContent = "0.00";
   totalPerPerson.textContent = "0.00";
   error.classList.add("hidden");
-  buttonDeactive();
+  btnsDeactive();
   customDeactive();
 });
 
@@ -68,6 +68,6 @@ function customDeactive() {
   return (customTip.value = "custom");
 }
 
-function buttonDeactive() {
+function btnsDeactive() {
   return btns.forEach((btn) => btn.classList.remove("button-active"));
 }
