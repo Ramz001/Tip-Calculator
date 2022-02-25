@@ -17,7 +17,7 @@ file of the project that accounts for all logics inside.
 
 ### Screenshot
 
-(images/Tip-Calculator-Screenshot.png)
+![alt text](images/Tip-Calculator-Screenshot.png)
 
 ### Links
 
